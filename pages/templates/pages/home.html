@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+
+<ul>
+{% for item in  object_list %}
+    <li>
+        {{ item.name }}
+        <form class="save-form" action="{% url 'favorites:save' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name='item' value="{{ item.id }}">
+            <button class="save-form__button" type="submit">Sauvegarder</button>
+        </form>
+    </li>
+{% endfor %}
+</ul>
+
+
+{% endblock content %}

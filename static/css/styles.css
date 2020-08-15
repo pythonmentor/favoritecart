@@ -1,0 +1,13 @@
+.save-form {
+    display: inline;
+}
+
+.save-form__button {
+    border: none;
+    background-color: white;
+    color: #0000f0;
+}
+
+.save-form__button:hover {
+    text-decoration: underline;
+}
